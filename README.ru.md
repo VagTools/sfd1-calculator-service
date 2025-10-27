@@ -42,6 +42,7 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
+--cookie 'language=en_US' \
 --data '{ 
     "structure": "6536xxxxx"
 }'
@@ -76,7 +77,8 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 ```bash
 curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
---header 'X-Response-Format: wrapped'
+--header 'X-Response-Format: wrapped' \
+--cookie 'language=en_US'
 ```
 
 #### Ответ
@@ -110,13 +112,10 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 #### Пример запроса
 
 ```bash
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
---header 'X-Response-Format: wrapped'
-
+--header 'X-Response-Format: wrapped' \
+--cookie 'language=en_US'
 ```
 
 
