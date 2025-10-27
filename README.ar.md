@@ -17,7 +17,7 @@
 |---|---|---|---|
 | X-API-Token | string | ✅ | رمز API-Token المطلوب من مزود الخدمة (ملاحظة: يرجى تعيين هذا الرمز كمتغير ، حيث سيصبح غير صالح بشكل دائم بعد عدد ثابت من الاستخدامات). |
 | X-Response-Format | string | ✅ | قيمة ثابتة `wrapped` |
-| Cookie | string | ✅ | يستخدم لتحديد لغة الاستجابة. على سبيل المثال، للحصول على استجابات باللغة الصينية، قم بتعيين `language=zh_CN`. اللغات المدعومة مدرجة في أعلى الوثيقة. |
+| Cookie | string | ✅ | يستخدم لتحديد لغة الاستجابة. على سبيل المثال، للحصول على استجابات باللغة الصينية، قم بتعيين `language=ar_SA`. اللغات المدعومة مدرجة في أعلى الوثيقة. |
 
 ---
 
@@ -43,10 +43,9 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=ar_SA' \
---data "{}
-{
+--data '{
     "structure": "6536xxxxx"
-}
+}'
 ```
 
 | الحقل | النوع | مطلوب | الوصف |
