@@ -17,7 +17,7 @@ Todas las solicitudes deben incluir lo siguiente en el encabezado:
 |---|---|---|---|
 | X-API-Token | string | ✅ | El token de API solicitado al proveedor de servicios (Nota: establezca este token como una variable, ya que dejará de ser válido permanentemente después de un número fijo de usos). |
 | X-Response-Format | string | ✅ | Valor fijo `wrapped` |
-| Cookie | string | ✅ | Se utiliza para especificar el idioma de la respuesta. Por ejemplo, para obtener respuestas en chino, establezca `language=zh_CN`. Los idiomas admitidos se enumeran al principio del documento. |
+| Cookie | string | ✅ | Se utiliza para especificar el idioma de la respuesta. Por ejemplo, para obtener respuestas en chino, establezca `language=es_ES`. Los idiomas admitidos se enumeran al principio del documento. |
 
 ---
 
@@ -43,7 +43,7 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=es_ES' \
---data 
+--data '{
     "structure": "6536xxxxx"
 }'
 ```
