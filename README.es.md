@@ -113,16 +113,10 @@ Este endpoint exporta todos los registros de cálculo asociados con el `X-API-To
 
 
 ```bash
-
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=es_ES'
-
 ```
 
 
