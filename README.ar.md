@@ -114,17 +114,10 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 
 
 ```bash
-
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=ar_SA'
-
-
 ```
 
 
