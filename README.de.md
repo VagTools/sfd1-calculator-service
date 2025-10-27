@@ -112,16 +112,10 @@ Dieser Endpunkt exportiert alle Berechnungslogs, die mit dem bereitgestellten `X
 #### Anforderungsbeispiel
 
 ```bash
-
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=de_DE'
-
 ```
 
 
