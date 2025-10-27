@@ -17,7 +17,7 @@
 |---|---|---|---|
 | X-API-Token | string | ✅ | サービスプロバイダーから申請したAPI-Token（注意：このトークンは、固定回数使用後に永久に無効になるため、変数として設定してください）。 |
 | X-Response-Format | string | ✅ | 固定値 `wrapped` |
-| Cookie | string | ✅ | 応答言語を指定するために使用します。例えば、中国語の応答を得るには `language=zh_CN` を設定します。サポートされている言語はドキュメントの冒頭に記載されています。 |
+| Cookie | string | ✅ | 応答言語を指定するために使用します。例えば、中国語の応答を得るには `language=ja_JP` を設定します。サポートされている言語はドキュメントの冒頭に記載されています。 |
 
 ---
 
@@ -44,9 +44,9 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'Content-Type: application/json' \
 --cookie 'language=ja_JP' \
 --data 
-    "{
-        \"structure\": \"6536xxxxx\"\n
-     }"
+{
+    "structure": "6536xxxxx"
+}
 ```
 
 | フィールド | タイプ | 必須 | 説明 |
