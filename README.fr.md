@@ -115,20 +115,10 @@ Ce point de terminaison exporte tous les journaux de calcul associés au `X-API-
 
 
 ```bash
-
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
-
 --header 'X-Response-Format: wrapped' \
-
-
 --cookie 'language=fr_FR'
-
-
 ```
 
 
