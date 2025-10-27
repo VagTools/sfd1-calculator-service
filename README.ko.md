@@ -43,10 +43,9 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=ko_KR' \
---data 
-{
+--data '{
     "structure": "6536xxxxx"
-}
+}'
 ```
 
 | 필드 | 타입 | 필수 | 설명 |
