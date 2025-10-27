@@ -17,7 +17,7 @@ All requests must include the following in the Header:
 |---|---|---|---|
 | X-API-Token | string | ✅ | The API-Token applied for from the service provider (Note: Please set this Token as a variable, as it will become permanently invalid after a fixed number of uses). |
 | X-Response-Format | string | ✅ | Fixed value `wrapped` |
-| Cookie | string | ✅ | Used to specify the response language. For example, to get Chinese responses, set `language=zh_CN`. Supported languages are listed at the top of the document. |
+| Cookie | string | ✅ | Used to specify the response language. For example, to get Chinese responses, set `language=en_US`. Supported languages are listed at the top of the document. |
 ---
 
 ## 2. API Overview
