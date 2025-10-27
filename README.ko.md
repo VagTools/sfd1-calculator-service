@@ -17,7 +17,7 @@
 |---|---|---|---|
 | X-API-Token | string | ✅ | 서비스 제공업체에서 신청한 API-Token (참고: 이 토큰은 고정된 횟수 사용 후 영구적으로 무효화되므로 변수로 설정하십시오). |
 | X-Response-Format | string | ✅ | 고정값 `wrapped` |
-| Cookie | string | ✅ | 응답 언어를 지정하는 데 사용됩니다. 예를 들어, 중국어 응답을 얻으려면 `language=zh_CN`을 설정하십시오. 지원되는 언어는 문서 상단에 나열되어 있습니다. |
+| Cookie | string | ✅ | 응답 언어를 지정하는 데 사용됩니다. 예를 들어, 중국어 응답을 얻으려면 `language=ko_KR`을 설정하십시오. 지원되는 언어는 문서 상단에 나열되어 있습니다. |
 
 ---
 
@@ -113,16 +113,10 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 
 
 ```bash
-
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=ko_KR'
-
 ```
 
 
