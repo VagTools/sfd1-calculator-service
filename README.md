@@ -17,6 +17,7 @@ All requests must include the following in the Header:
 |---|---|---|---|
 | X-API-Token | string | ✅ | The API-Token applied for from the service provider (Note: Please set this Token as a variable, as it will become permanently invalid after a fixed number of uses). |
 | X-Response-Format | string | ✅ | Fixed value `wrapped` |
+| Cookie | string | | Used to specify the response language. For example, to get Chinese responses, set `language=zh_CN`. Supported languages are listed at the top of the document. |
 
 ---
 
@@ -26,6 +27,7 @@ All requests must include the following in the Header:
 |---|---|---|---|
 | Submit Calculation Task | POST | `/api/sfd/calc` | Submit a structure number and return a task token. |
 | Query Remaining Times | GET | `/api/sfd/token-remaining-times`| Query the remaining call times for the current API-Key. |
+| Export Calculation Logs | GET | `/api/sfd/calc-logs` | Export all calculation logs for the current API-Key as a file. |
 
 ---
 
@@ -91,3 +93,36 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 | Field | Type | Description |
 |---|---|---|
 | remaining | number | The remaining number of times this API-Key can be called. |
+
+### 3.3 Export Calculation Logs
+**GET** `/api/sfd/calc-logs`
+
+This endpoint exports all calculation logs associated with the provided `X-API-Token`. It triggers a file download, typically in a spreadsheet format (e.g., Excel/CSV).
+
+#### Request Example
+```bash
+curl --location '{{BaseURL}}/api/sfd/calc-logs' \
+--header 'X-API-Token: {{YOUR_API_TOKEN}}' \
+--header 'X-Response-Format: wrapped'
+```
+
+#### Response
+The response will be a file download, not a JSON object. The browser or client will handle the download process.
+
+---
+
+## 4. Error Codes
+
+The service returns the following business error codes in the `code` field of the response body when a request fails.
+
+| Business Code | HTTP Status | Description (from messages.properties) |
+|---|---|---|
+| 40300 | 403 | API token has disabled. |
+| 40301 | 403 | API token has expired. |
+| 40001 | 400 | API token has insufficient remaining quantity. |
+| 40003 | 400 | No bound grp information for API token. |
+| 40004 | 400 | Cannot convert to SOAP structure. |
+| 40002 | 400 | Structure length exception. length must be {0} or {1} |
+| 40002 | 400 | Illegal request argument exception. |
+| 40003 | 403 | Access forbidden. |
+| 50001 | 500 | Unknown system exception. |
