@@ -17,7 +17,7 @@
 |---|---|---|---|
 | X-API-Token | string | ✅ | API-токен, полученный от поставщика услуг (Примечание: установите этот токен как переменную, так как он станет недействительным после фиксированного количества использований). |
 | X-Response-Format | string | ✅ | Фиксированное значение `wrapped` |
-| Cookie | string | ✅ | Используется для указания языка ответа. Например, чтобы получить ответы на китайском языке, установите `language=zh_CN`. Поддерживаемые языки перечислены в начале документа. |
+| Cookie | string | ✅ | Используется для указания языка ответа. Например, чтобы получить ответы на китайском языке, установите `language=ru_RU`. Поддерживаемые языки перечислены в начале документа. |
 
 ---
 
@@ -42,8 +42,8 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
---cookie 'language=en_US' \
---data '{ 
+--cookie 'language=ru_RU' \
+--data '{
     "structure": "6536xxxxx"
 }'
 ```
@@ -78,7 +78,7 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
 --header 'X-Response-Format: wrapped' \
---cookie 'language=en_US'
+--cookie 'language=ru_RU'
 ```
 
 #### Ответ
@@ -115,7 +115,7 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
 --header 'X-Response-Format: wrapped' \
---cookie 'language=en_US'
+--cookie 'language=ru_RU'
 ```
 
 
