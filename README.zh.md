@@ -43,10 +43,9 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=zh_CN' \
---data 
-{
+--data '{
     "structure": "6536xxxxx"
-}
+}'
 ```
 
 | 字段        | 类型     | 必填 | 说明           |
@@ -110,15 +109,10 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 #### 请求示例
 
 ```bash
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=zh_CN'
-
 ```
 
 
