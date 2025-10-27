@@ -17,7 +17,7 @@ Todas as solicitações devem incluir o seguinte no cabeçalho:
 |---|---|---|---|
 | X-API-Token | string | ✅ | O API-Token solicitado ao provedor de serviços (Observação: defina este token como uma variável, pois ele se tornará permanentemente inválido após um número fixo de usos). |
 | X-Response-Format | string | ✅ | Valor fixo `wrapped` |
-| Cookie | string | ✅ | Usado para especificar o idioma da resposta. Por exemplo, para obter respostas em chinês, defina `language=zh_CN`. Os idiomas suportados estão listados no topo do documento. |
+| Cookie | string | ✅ | Usado para especificar o idioma da resposta. Por exemplo, para obter respostas em chinês, defina `language=pt_PT`. Os idiomas suportados estão listados no topo do documento. |
 
 ---
 
@@ -43,7 +43,7 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=pt_PT' \
---data 
+--data '{
     "structure": "6536xxxxx"
 }'
 ```
@@ -110,15 +110,10 @@ Este endpoint exporta todos os registros de cálculo associados ao `X-API-Token`
 #### Exemplo de solicitação
 
 ```bash
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=pt_PT'
-
 ```
 
 
