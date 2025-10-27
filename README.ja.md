@@ -45,7 +45,8 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --cookie 'language=ja_JP' \
 --data 
     "{
-        \"structure\": \"6536xxxxx\"\n    }"
+        \"structure\": \"6536xxxxx\"\n
+     }"
 ```
 
 | フィールド | タイプ | 必須 | 説明 |
@@ -111,13 +112,9 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 ```bash
 
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=ja_JP'
-
 ```
 
 
