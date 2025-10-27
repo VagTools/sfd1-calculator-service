@@ -17,7 +17,7 @@ Toutes les demandes doivent inclure les éléments suivants dans l'en-tête :
 |---|---|---|---|
 | X-API-Token | string | ✅ | Le jeton d'API demandé au fournisseur de services (Remarque : veuillez définir ce jeton comme une variable, car il deviendra définitivement invalide après un nombre fixe d'utilisations). |
 | X-Response-Format | string | ✅ | Valeur fixe `wrapped` |
-| Cookie | string | ✅ | Utilisé pour spécifier la langue de la réponse. Par exemple, pour obtenir des réponses en chinois, définissez `language=zh_CN`. Les langues prises en charge sont listées en haut du document. |
+| Cookie | string | ✅ | Utilisé pour spécifier la langue de la réponse. Par exemple, pour obtenir des réponses en chinois, définissez `language=fr_FR`. Les langues prises en charge sont listées en haut du document. |
 
 ---
 
@@ -43,10 +43,9 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=fr_FR' \
---data 
-{
+--data '{
     "structure": "6536xxxxx"
-}
+}'
 ```
 
 | Champ | Type | Requis | Description |
