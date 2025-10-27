@@ -17,7 +17,7 @@
 |---|---|---|---|
 | X-API-Token | string | ✅ | API-токен, отриманий від постачальника послуг (Примітка: будь ласка, встановіть цей токен як змінну, оскільки він стане недійсним після фіксованої кількості використань). |
 | X-Response-Format | string | ✅ | Фіксоване значення `wrapped` |
-| Cookie | string | ✅ | Використовується для вказівки мови відповіді. Наприклад, щоб отримати відповіді китайською мовою, встановіть `language=zh_CN`. Підтримувані мови перераховані на початку документа. |
+| Cookie | string | ✅ | Використовується для вказівки мови відповіді. Наприклад, щоб отримати відповіді китайською мовою, встановіть `language=uk_UA`. Підтримувані мови перераховані на початку документа. |
 
 ---
 
@@ -43,10 +43,9 @@ curl --location '{{BaseURL}}/api/sfd/calc' \
 --header 'X-Response-Format: wrapped' \
 --header 'Content-Type: application/json' \
 --cookie 'language=uk_UA' \
---data 
-{
+--data '{
     "structure": "6536xxxxx"
-}
+}'
 ```
 
 | Поле | Тип | Обов'язково | Опис |
@@ -114,16 +113,10 @@ curl --location '{{BaseURL}}/api/sfd/token-remaining-times' \
 
 
 ```bash
-
-
 curl --location '{{BaseURL}}/api/sfd/calc-logs' \
-
 --header 'X-API-Token: {{YOUR_API_TOKEN}}' \
-
 --header 'X-Response-Format: wrapped' \
-
 --cookie 'language=uk_UA'
-
 ```
 
 
